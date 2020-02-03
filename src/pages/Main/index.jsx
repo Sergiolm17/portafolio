@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { P, App } from "./styled";
-import { MainData, MainWho } from "../../data";
+import { MainData, MainWho, MainImage } from "../../data";
 let minimum_number = 0;
 let max_number = 1;
 console.log();
@@ -21,7 +21,7 @@ export default () => {
     };
   }, []);
   return (
-    <App className="Container">
+    <App className="Container" url={MainImage}>
       <P>{MainData[0]} </P>
       <P>{MainWho[count]} </P>
     </App>

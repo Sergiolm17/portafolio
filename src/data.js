@@ -3,6 +3,10 @@ export const MainWho = [
   "absolutely loves what he does.",
   "enjoys working as much as playing."
 ];
+export const MainImage =
+  "http://robgrabowski.me/wp-content/uploads/2016/12/hero-image.jpg";
+export const ContactImage =
+  "http://robgrabowski.me/wp-content/uploads/2016/12/hero-image.jpg";
 export const AboutMeData = [
   `My name is Rob Grabowski and I’m a web designer and developer.`,
   `
@@ -29,7 +33,7 @@ export const AboutMeData = [
     get in touch.`
 ];
 export const email = "kingsergiolm17@gmail.com";
-export const emailhref = "kingsergiolm17@gmail.com";
+export const emailhref = "mailto:kingsergiolm17@gmail.com";
 export const resumehref = "kingsergiolm17@gmail.com";
 export const Works = [
   {

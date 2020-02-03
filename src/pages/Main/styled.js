@@ -17,17 +17,15 @@ export const P = styled(Ppose)`
   color: #fff;
   text-align: center;
 `;
-const Container = posed.div({
-  enter: { staggerChildren: 50 }
-});
-export const App = styled(Container)`
+
+export const App = styled.div`
   ${Height}
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  background-image: url("http://robgrabowski.me/wp-content/uploads/2016/12/hero-image.jpg");
+  background-image: url(${props => props.url});
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */

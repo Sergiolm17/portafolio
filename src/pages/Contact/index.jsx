@@ -3,12 +3,13 @@ import { Input } from "../../components/Input";
 import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import { Height } from "../styles";
+import { ContactImage } from "../../data";
 
 const App = styled(Grid)`
   ${Height}
 `;
 const Image = styled(Grid)`
-  background-image: url("http://robgrabowski.me/wp-content/uploads/2016/12/hero-image.jpg");
+  background-image: url(${props => props.url});
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -29,7 +30,7 @@ const Background = styled(Grid)`
 export default () => {
   return (
     <App container spacing={0}>
-      <Image item xs={12} sm={6} />
+      <Image item xs={12} sm={6} url={ContactImage} />
       <Background item xs={12} sm={6}>
         <h1>Want to get in touch?</h1>
         <p>
