@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import menu from "../../menu.svg";
+import returnicon from "../../return.svg";
 import sm from "../../sm.svg";
 import Menu from "../Menu";
 import { Link } from "@reach/router";
@@ -32,7 +33,7 @@ export default () => {
           <img src={sm} alt="sm" />
         </Link>
         <MenuLogo
-          src={menu}
+          src={open ? returnicon : menu}
           alt="menu"
           style={{ zIndex: 1000 }}
           onClick={() => setOpen(!open)}

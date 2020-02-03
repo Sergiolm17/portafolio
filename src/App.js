@@ -5,20 +5,37 @@ import Main from "./pages/Main";
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
 import Work from "./pages/Work";
-import { Router } from "@reach/router";
-
+import { Router, Location } from "@reach/router";
 import Container from "./components/Container";
+import posed, { PoseGroup } from "react-pose";
+
+const RouteContainer = posed.div({
+  enter: { opacity: 1, delay: 300, beforeChildren: 300 },
+  exit: { opacity: 0 }
+});
+
+const PosedRouter = ({ children }) => (
+  <Location>
+    {({ location }) => (
+      <PoseGroup>
+        <RouteContainer key={location.key}>
+          <Router location={location}>{children}</Router>
+        </RouteContainer>
+      </PoseGroup>
+    )}
+  </Location>
+);
 function App() {
   return (
     <div className="Body">
       <Header />
       <Container>
-        <Router>
+        <PosedRouter>
           <Main path="/" />
           <AboutMe path="/about-me" />
           <Work path="/work" />
           <Contact path="/contact" />
-        </Router>
+        </PosedRouter>
       </Container>
     </div>
   );

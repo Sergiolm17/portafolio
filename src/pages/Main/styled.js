@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { Height } from "../styles";
-export const P = styled.p`
+import posed from "react-pose";
+const Ppose = posed.p({
+  enter: { y: 0, opacity: 1 },
+  exit: { y: 50, opacity: 0 }
+});
+
+export const P = styled(Ppose)`
   font-size: 1.4em;
   font-family: "Cormorant Garamond", serif;
   font-style: normal;
@@ -11,7 +17,10 @@ export const P = styled.p`
   color: #fff;
   text-align: center;
 `;
-export const App = styled.div`
+const Container = posed.div({
+  enter: { staggerChildren: 50 }
+});
+export const App = styled(Container)`
   ${Height}
   display: flex;
   flex-direction: column;

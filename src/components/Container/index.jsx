@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { Height } from "../../pages/styles";
 
 export const Container = styled.div`
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   ${Height}
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);

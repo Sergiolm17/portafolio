@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, TextAreaMessage } from "../../components/Input";
+import { Input } from "../../components/Input";
 import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import { Height } from "../styles";

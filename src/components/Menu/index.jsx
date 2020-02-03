@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, Background, Title, Hr, Group, Contact } from "./styles";
+import { email, emailhref, resumehref } from "../../data";
 
 export default ({ inopen, setOpen }) => {
   if (!inopen) return "";
@@ -19,8 +20,8 @@ export default ({ inopen, setOpen }) => {
         </Link>
       </Group>
       <Group>
-        <Contact href="#example">kingsergiolm17@gmail.com</Contact>
-        <Contact href="#example">+Download My resume</Contact>
+        <Contact href={emailhref}>{email} </Contact>
+        <Contact href={resumehref}>+Download My resume</Contact>
       </Group>
     </Background>
   );

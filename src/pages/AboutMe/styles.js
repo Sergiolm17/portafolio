@@ -1,5 +1,9 @@
 import styled from "styled-components";
-
+import posed from "react-pose";
+const TextP = posed.p({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 50, opacity: 0 }
+});
 export const App = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,7 +15,12 @@ export const App = styled.div`
     content: #fff;
   }
 `;
-export const P = styled.p`
+const Title = posed.div({
+  enter: { staggerChildren: 50 }
+});
+
+export const P = styled(Title)`
+  text-align: start;
   font-size: 2.4em;
   font-family: "Cormorant Garamond", serif;
   font-style: normal;
@@ -20,11 +29,10 @@ export const P = styled.p`
   overflow: hidden;
   width: auto;
   color: #fff;
-  text-align: center;
   padding: 0 20px;
   margin: 25px 0;
 `;
-export const Text = styled.p`
+export const Text = styled(TextP)`
   font-size: 1.4em;
   font-family: "Lato", sans-serif;
   font-style: normal;
