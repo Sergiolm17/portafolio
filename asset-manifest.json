@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Sergiolm17/portafolio/static/css/main.446555f7.chunk.css",
+    "main.js": "/Sergiolm17/portafolio/static/js/main.0f349477.chunk.js",
+    "main.js.map": "/Sergiolm17/portafolio/static/js/main.0f349477.chunk.js.map",
+    "runtime-main.js": "/Sergiolm17/portafolio/static/js/runtime-main.491c1ed6.js",
+    "runtime-main.js.map": "/Sergiolm17/portafolio/static/js/runtime-main.491c1ed6.js.map",
+    "static/js/2.d563661e.chunk.js": "/Sergiolm17/portafolio/static/js/2.d563661e.chunk.js",
+    "static/js/2.d563661e.chunk.js.map": "/Sergiolm17/portafolio/static/js/2.d563661e.chunk.js.map",
+    "index.html": "/Sergiolm17/portafolio/index.html",
+    "precache-manifest.16e744d5fabd1b31aefe14fb8b1dc077.js": "/Sergiolm17/portafolio/precache-manifest.16e744d5fabd1b31aefe14fb8b1dc077.js",
+    "service-worker.js": "/Sergiolm17/portafolio/service-worker.js",
+    "static/css/main.446555f7.chunk.css.map": "/Sergiolm17/portafolio/static/css/main.446555f7.chunk.css.map",
+    "static/js/2.d563661e.chunk.js.LICENSE.txt": "/Sergiolm17/portafolio/static/js/2.d563661e.chunk.js.LICENSE.txt",
+    "static/media/menu.svg": "/Sergiolm17/portafolio/static/media/menu.e51dc046.svg",
+    "static/media/return.svg": "/Sergiolm17/portafolio/static/media/return.caff89b4.svg",
+    "static/media/sm.svg": "/Sergiolm17/portafolio/static/media/sm.fd9c865a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.491c1ed6.js",
+    "static/js/2.d563661e.chunk.js",
+    "static/css/main.446555f7.chunk.css",
+    "static/js/main.0f349477.chunk.js"
+  ]
+}
