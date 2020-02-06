@@ -3,7 +3,7 @@ import { Input } from "../../components/Input";
 import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import { Height } from "../styles";
-import { ContactImage } from "../../data";
+import { useFetch } from "../../hooks/useFetch";
 
 const App = styled(Grid)`
   ${Height}
@@ -28,9 +28,13 @@ const Background = styled(Grid)`
   }
 `;
 export default () => {
+  const data = useFetch({
+    url: "https://sergiolazaromondargo.firebaseio.com/profile.json",
+    init: {}
+  });
   return (
     <App container spacing={0}>
-      <Image item xs={12} sm={6} url={ContactImage} />
+      <Image item xs={12} sm={6} url={data.ContactImage} />
       <Background item xs={12} sm={6}>
         <h1>Want to get in touch?</h1>
         <p>

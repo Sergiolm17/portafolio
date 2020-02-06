@@ -1,29 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { P, App } from "./styled";
-import { MainData, MainWho, MainImage } from "../../data";
-let minimum_number = 0;
-let max_number = 1;
-console.log();
+import { useFetch } from "../../hooks/useFetch";
 
 export default () => {
-  const [count, setCount] = useState(
-    Math.floor(
-      Math.random() * (max_number + 1 - minimum_number) + minimum_number
-    )
-  );
+  const data = useFetch({
+    url: "https://sergiolazaromondargo.firebaseio.com/profile.json",
+    init: {}
+  });
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
+    let max_number = data.Subtitle || 1;
     let inter = setInterval(() => {
       setCount(c => (c >= max_number ? 0 : c + 1));
     }, 3000);
     return () => {
       clearInterval(inter);
     };
-  }, []);
+  }, [data]);
+
   return (
-    <App className="Container" url={MainImage}>
-      <P>{MainData[0]} </P>
-      <P>{MainWho[count]} </P>
+    <App url={data.MainImage}>
+      <P>{data.Title} </P>
+      <P>{data.Subtitle && data.Subtitle[count]}</P>
     </App>
   );
 };

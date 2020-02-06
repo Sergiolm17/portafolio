@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Grid from "@material-ui/core/Grid";
 import { Height } from "../styles";
-import { Works } from "../../data";
+import { useFetch } from "../../hooks/useFetch";
 import posed from "react-pose";
 
 import ItemWork from "../../components/ItemWork";
@@ -18,10 +18,14 @@ const Sidebar = posed.div({
   exit: { x: "-100%", delay: 300 }
 });
 export default () => {
+  const data = useFetch({
+    url: "https://sergiolazaromondargo.firebaseio.com/work.json",
+    init: []
+  });
   return (
     <ContainerGrid container spacing={0}>
       <Sidebar>
-        {Works.map((work, i) => (
+        {data.map((work, i) => (
           <ItemWork key={i} work={work} />
         ))}
       </Sidebar>
