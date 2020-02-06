@@ -1,11 +1,11 @@
 import React from "react";
 import { Input } from "../../components/Input";
-import Grid from "@material-ui/core/Grid";
+import { Col } from "react-grid";
 import styled from "styled-components";
 import { Height } from "../styles";
 import { useFetch } from "../../hooks/useFetch";
 
-const App = styled(Grid)`
+const App = styled(Col)`
   ${Height}
 `;
 const Image = styled(Grid)`

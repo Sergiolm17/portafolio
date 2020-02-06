@@ -1,14 +1,8 @@
 import styled from "styled-components";
 import { Height } from "../styles";
-import posed from "react-pose";
-import Grid from "@material-ui/core/Grid";
+import { Col } from "react-grid";
 
-const Ppose = posed.p({
-  enter: { y: 0, opacity: 1 },
-  exit: { y: 50, opacity: 0 }
-});
-
-export const P = styled(Ppose)`
+export const P = styled.p`
   font-size: 1.4em;
   font-family: "Cormorant Garamond", serif;
   font-style: normal;
@@ -32,7 +26,7 @@ export const App = styled.div`
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 `;
-export const Body = styled(Grid)`
+export const Body = styled(Col)`
   background: #e7e7e7;
   h2 {
     color: #19273a;

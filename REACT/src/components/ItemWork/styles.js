@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Grid from "@material-ui/core/Grid";
+import { Col } from "react-grid";
 
-export const Background = styled(Grid)`
+export const Background = styled(Col)`
   height: 50vh;
   background: rgba(25, 39, 58, 1);
   position: relative;

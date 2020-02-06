@@ -1,9 +1,5 @@
 import styled from "styled-components";
-import posed from "react-pose";
-const TextP = posed.p({
-  enter: { x: 0, opacity: 1 },
-  exit: { x: 50, opacity: 0 }
-});
+
 export const App = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,7 +28,7 @@ export const P = styled(Title)`
   padding: 0 20px;
   margin: 25px 0;
 `;
-export const Text = styled(TextP)`
+export const Text = styled.p`
   font-size: 1.4em;
   font-family: "Lato", sans-serif;
   font-style: normal;
